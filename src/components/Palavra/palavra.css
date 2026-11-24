@@ -1,0 +1,23 @@
+.informarPalavra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.enviar {
+  border-radius: 5px;
+  height: clamp(15px, 10vh, 25px);
+  width: clamp(60px, 20vw, 70px);
+  margin: 5px;
+}
+
+.letras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 36px;
+  gap: 16px;
+}

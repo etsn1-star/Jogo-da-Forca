@@ -1,0 +1,9 @@
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 10px;
+  border: solid 5px #087e8b;
+  padding: 10px;
+  background-color: #d9f3f5;
+  border-radius: 12px;
+}
