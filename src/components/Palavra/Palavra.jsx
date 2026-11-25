@@ -4,7 +4,7 @@ import "./palavra.css";
 const Palavra = () => {
   const [ligado, setLigado] = useState(true);
   const [palavra, setPalavra] = useState("");
-  const letras = palavra.split("");
+  const [visiveis, setVisiveis] = useState([]);
 
   return (
     <>
@@ -21,16 +21,22 @@ const Palavra = () => {
           </button>
         </div>
       ) : (
-        <div className="letras">
-          {letras.map((letra) => (
-            <span key={letra}>
-              <h2>_</h2>
-            </span>
-          ))}
-        </div>
+        <Letras palavra={palavra} visiveis={visiveis} />
       )}
     </>
   );
 };
 
 export default Palavra;
+
+const Letras = ({ palavra, visiveis }) => {
+  return (
+    <div className="letras">
+      {palavra.split("").map((letra, index) => (
+        <span key={index}>
+          <h2>{visiveis.includes(index) ? letra : "_"}</h2>
+        </span>
+      ))}
+    </div>
+  );
+};
