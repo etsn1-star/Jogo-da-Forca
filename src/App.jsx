@@ -1,13 +1,7 @@
-import Teclado from "./components/Teclado/Teclado";
-import Palavra from "./components/Palavra/Palavra";
+import Jogo from "./components/Jogo/Jogo";
 
 function App() {
-  return (
-    <>
-      <Palavra />
-      <Teclado />
-    </>
-  );
+  return <Jogo />;
 }
 
 export default App;
